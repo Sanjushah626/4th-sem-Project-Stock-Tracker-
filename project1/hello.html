@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyShareApp — Market Dashboard</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+</head>
+<body>
+
+  <header>
+    <h1>MyShareApp</h1>
+
+    <nav aria-label="Main navigation">
+      <a href="hello.html">Home</a>
+      <a href="market.html">Market</a>
+      <a href="portfolio.php">Portfolio</a>
+      <a href="news.php">News</a>
+      <a href="contact.php">Contact Us</a>
+    </nav>
+
+    <div id="right-section">
+      <div id="market-status" aria-live="polite">
+        <span class="dot closed"></span> Checking status...
+      </div>
+      <button class="login-btn" onclick="window.location.href='logout.php'">Logout</button>
+    </div>
+  </header>
+
+  <main>
+    
+
+    
+   <section class="grid" aria-label="Market overview">
+
+  <!-- Left Column -->
+  <div class="left-column">
+
+    <div class="card">
+      <h2 class="section-title">NEPSE Chart</h2>
+      <div class="chart-area" id="chart"></div>
+    </div>
+<div class="card">
+      <h2 class="section-title">Top 5 Gainers</h2>
+      <table id="traded" style="height: 500px;">
+            <thead>
+              <tr>
+                <th>Symbol</th>
+                <th>Company Name</th>
+                <th>Volume</th>
+                <th>LTP</th>
+            
+                
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+    <!-- Fill the empty space below the chart -->
+    
+
+  </div>
+
+  <!-- Right Column -->
+  <div class="movers-column">
+
+    <div class="card">
+      <h2 class="section-title">Top 5 Gainers</h2>
+      <table id="gainersTable">
+            <thead>
+              <tr>
+                <th>Symbol</th>
+                <th>Company Name</th>
+                <th>LTP</th>
+                <th>Point Change</th>
+                <th>% Change</th>
+                
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+
+        <div class="card">
+          <h2 class="section-title">Top 5 Losers</h2>
+          <table id="losersTable">
+            <thead>
+              <tr>
+                <th>Symbol</th>
+                <th>Company Name</th>
+                <th>LTP</th>
+                <th>Change</th>
+                <th>% Change</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+
+    </section>
+
+    
+    <section aria-labelledby="main-index-heading">
+      <h2 class="section-title" id="main-index-heading">Main Index</h2>
+      <div class="index-box" id="main-index">
+        <div class="index-card">
+          <h3>NEPSE Index</h3>
+          <div class="index-value">Loading...</div>
+        </div>
+        <div class="index-card">
+          <h3>Sensitive Index</h3>
+          <div class="index-value">Loading...</div>
+        </div>
+      </div>
+    </section>
+
+   
+    <section aria-labelledby="sub-index-heading">
+      <h2 class="section-title" id="sub-index-heading">Sub Index</h2>
+      <div class="index-box" id="sub-index">
+        <div class="index-card">
+          <h3>Bank Index</h3>
+          <div class="index-value">Loading...</div>
+        </div>
+        <div class="index-card">
+          <h3>Hydro Index</h3>
+          <div class="index-value">Loading...</div>
+        </div>
+        <div class="index-card">
+          <h3>Finance Index</h3>
+          <div class="index-value">Loading...</div>
+        </div>
+        <div class="index-card">
+          <h3>Hotel Index</h3>
+          <div class="index-value">Loading...</div>
+        </div>
+      </div>
+    </section>
+
+   
+    <section aria-labelledby="market-summary-heading">
+      <h2 class="section-title" id="market-summary-heading">Market Summary</h2>
+      <div class="index-box" id="market-summary">
+        <div class="index-card">
+          <h3>Total Turnover (Rs)</h3>
+          <div class="index-value">Loading...</div>
+        </div>
+        <div class="index-card">
+          <h3>Total Traded Shares</h3>
+          <div class="index-value">Loading...</div>
+        </div>
+        <div class="index-card">
+          <h3>Total Transactions</h3>
+          <div class="index-value">Loading...</div>
+        </div>
+        <div class="index-card">
+          <h3>Total Scrips Traded</h3>
+          <div class="index-value">Loading...</div>
+        </div>
+        <div class="index-card">
+          <h3>Total Market Capitalization (Rs)</h3>
+          <div class="index-value">After Market Closes</div>
+        </div>
+        <div class="index-card">
+          <h3>Total Float Market Capitalization (Rs)</h3>
+          <div class="index-value">After Markte Closes</div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>© 2026 MyShareApp. All rights reserved.</p>
+      <p>Data provided by NEPSE API | For educational purposes only</p>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="hello.html">Home</a> |
+        <a href="market.html">Market</a> |
+        <a href="portfolio.php">Portfolio</a> |
+        <a href="news.php">News</a> |
+        <a href="contact.php">Contact Us</a>
+      </nav>
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook">Facebook</a>
+        <a href="#" aria-label="Twitter">Twitter</a>
+        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

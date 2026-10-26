@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <h1>MyShareApp</h1>
+    <nav>
+      <a href="hello.html">Home</a>
+      <a href="market.html">Market</a>
+      <?php if ($logged_in): ?><a href="portfolio.php">Portfolio</a><?php endif; ?>
+      <a href="news.php">News</a>
+      <a href="contact.php">Contact Us</a>
+    </nav>
+    <div id="right-section">
+      <?php if ($logged_in): ?>
+        <button class="login-btn" onclick="window.location.href='logout.php'">Logout</button>
+      <?php else: ?>
+        <button class="login-btn" onclick="window.location.href='login.php'">Login</button>
+      <?php endif; ?>
+    </div>
+  </header>
+     <footer class="foot" style="margin-top:80px;">
+    <div class="footer-content">
+      <p>© 2026 MyShareApp. All rights reserved.</p>
+      <p>Data provided by NEPSE API | For Educational purposes only</p>
+      <nav class="footer-nav">
+        <a href="hello.html">Home</a> |
+        <a href="market.html">Market</a> |
+        <a href="news.php">News</a> |
+        <a href="contact.php">Contact Us</a>
+      </nav>
+      <div class="social-icons">
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+        <a href="#">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
+
+</body>
+</html>
